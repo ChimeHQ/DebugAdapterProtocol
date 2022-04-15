@@ -9,6 +9,15 @@
           "revision": "b1a7a8a6186f2fcb28f7bda67cfc545de48b3c80",
           "version": "0.6.2"
         }
+      },
+      {
+        "package": "JSONRPC",
+        "repositoryURL": "https://github.com/ChimeHQ/JSONRPC",
+        "state": {
+          "branch": "main",
+          "revision": "55071da13d109e61584750f39c0941d49711b962",
+          "version": null
+        }
       }
     ]
   },

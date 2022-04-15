@@ -11,12 +11,13 @@ let package = Package(
             targets: ["DebugAdapterProtocol"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/ChimeHQ/JSONRPC", .branch("main")),
         .package(url: "https://github.com/Flight-School/AnyCodable", "0.6.0"..<"0.6.3"),
     ],
     targets: [
         .target(
             name: "DebugAdapterProtocol",
-            dependencies: ["AnyCodable"]),
+            dependencies: ["AnyCodable", "JSONRPC"]),
         .testTarget(
             name: "DebugAdapterProtocolTests",
             dependencies: ["DebugAdapterProtocol"]),
