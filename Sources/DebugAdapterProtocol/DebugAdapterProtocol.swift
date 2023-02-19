@@ -1,17 +1,36 @@
 import Foundation
 
-public enum ClientRequest {
-    public enum Command: String {
-        case initialize
-    }
+public enum ClientNotification {
+	case thing
+}
 
-    case initialize(InitializeRequestArguments)
+public enum ClientRequest {
+	case initialize(InitializeRequestArguments)
+
+	public var command: String {
+		switch self {
+		case .initialize:
+			return "initialize"
+		}
+	}
+}
+
+public enum ClientEvent {
+	case thing
 }
 
 public enum ServerNotification {
-    public enum Event: String {
-        case initialized
-    }
+	case thing
+}
 
-    case initialized
+public enum ServerEvent {
+	public enum Command: String {
+		case initialized
+	}
+
+	case initialized
+}
+
+public enum ServerRequest {
+	case thing
 }
